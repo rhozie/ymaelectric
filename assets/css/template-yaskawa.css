@@ -319,16 +319,101 @@ Banner Style
 --------------------------------------------- 
 */
 
-.main-banner .item {
-  background-position: center center;
+/* .main-banner .item {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 220px 20% 320px 20%;
   margin-top: 0px;
+} */
+
+/* .main-banner .h2 {
+  position: left;
+} */
+
+.main-banner {
+  width: 100%;
+  min-height: 70vh; /* 60% tinggi layar */
+  background: url("../images/profile_4.jpg") no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  overflow: hidden;
 }
 
-.main-banner .item-1 {
-  background-image: url(../images/profile_4.jpg);
+/* Untuk Desktop (>1024px) */
+@media (min-width: 1024px) {
+  .main-banner {
+    min-height: 80vh;
+  }
+}
+
+/* Untuk Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+  .main-banner {
+    min-height: 60vh;
+    background-position: center center;
+  }
+}
+
+/* Untuk Mobile (320px - 767px) */
+@media (max-width: 767px) {
+  .main-banner {
+    min-height: 30vh;
+    background-size: contain; /* Agar tidak kepotong di HP kecil */
+    background-position: top center; /* Fokus ke bagian atas gambar */
+    padding: 10px;
+  }
+}
+
+.main-banner .header-text {
+  margin-left: 5vw;
+}
+
+@media (min-width: 768px) { 
+  .main-banner .header-text {
+    margin-left: 15vw;
+    line-height: 1; /* Geser lebih jauh di tablet */
+  }
+  .category {
+    font-size: 1.25rem;
+    padding: 12px 24px;
+  }
+}
+
+@media (min-width: 1024px) { 
+  .main-banner .header-text {
+    margin-left: 35vh;/* Geser lebih jauh di desktop */
+  }
+  .category {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+  }
+}
+
+.main-banner .item h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 0.9;
+  width: 50%;
+  margin-bottom: 0px;
+}
+
+@media (min-width: 768px) {  /* Tablet */
+  .main-banner .item h2 {
+    font-size: 2.5rem;
+    line-height: 1; /* Biar lebih rapat di layar kecil */
+  }
+}
+
+@media (min-width: 1024px) {  /* Desktop */
+  .main-banner .item h2 {
+    font-size: 3.5rem;
+    line-height: 1.2; /* Sesuaikan jika perlu */
+  }
 }
 
 .main-banner .item span.category {
@@ -354,16 +439,6 @@ Banner Style
 
 .main-banner .item span.category em :hover {
   color: #fff;
-}
-
-.main-banner .item h2 {
-  font-size: 62px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
-  line-height: 72px;
-  width: 50%;
-  margin-bottom: 0px;
 }
 
 .main-banner .owl-dots {
