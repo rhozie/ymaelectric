@@ -5,6 +5,7 @@ const mail = document.getElementById("email");
 const phone = document.getElementById("phone");
 const subject = document.getElementById("subject");
 const message = document.getElementById("message");
+require('dotenv').config();
 
 function sendEmail() {
     const bodyMessage = `Full Name: ${fullName.value}<br> Compnay: ${companyName.value}<br> Email: ${mail.value}<br> Phone: ${phone.value}<br> Message: ${message.value}`;
